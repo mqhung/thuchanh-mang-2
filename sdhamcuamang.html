@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use simple function of array</title>
+</head>
+<body>
+
+<script>
+    //bai1
+    // joinArray();
+    //
+    // function joinArray(){
+    //     let arr = new Array('mai', 'quang', 'hung','1993');
+    //     document.write(arr.join('&nbsp;&nbsp'));
+    // }
+
+    // bai2
+    // let array=[0,4,6,7,8,0];
+    // let array1=[];
+    //    for ( let i = 0 ;i <array.length ;i++){
+    //             array1.push(array[i]);
+    //            if( array[i] %2 ===0 && array[i+1] %2 ===0){
+    //                array1.push("-");
+    //            }
+    //    }
+    //    document.write(array1.join(" "))
+
+    //ba3
+    let str = 'MaIqUaNgHuNg';
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(UPPER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(LOWER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>

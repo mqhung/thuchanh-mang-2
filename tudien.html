@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<label for="dictionary">Tra từ điển</label>
+<input type="text" id="dictionary">
+<input type="button" value="Find" onclick="tranSlate()">
+<p id="result"></p>
+<script>
+    function tranSlate() {
+        let txt = document.getElementById('dictionary').value;
+        let english = new Array('hello', 'byebye', 'thanks');
+        let vn = new Array('xinchao', 'tambiet', 'camon');
+        for (let i = 0; i < english.length; i++) {
+            if (txt.toLowerCase() == english[i]) {
+                document.getElementById('result').innerHTML = vn[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>
